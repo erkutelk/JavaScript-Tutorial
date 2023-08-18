@@ -1,0 +1,25 @@
+/* Temel stil sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Üst düzey liste stilleri */
+.ul {
+    width: 100%;
+    height: 50px;
+}
+
+/* Menü öğeleri */
+.menu li {
+    display: inline-block;
+    margin: 20px;
+    list-style: none;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

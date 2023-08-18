@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="class">
+        <h1 id='isim'>Erkut ELik</h1>
+    </div>
+
+    <ul>
+        <li>görev1</li>
+        <li>görev2</li>
+        <li>görev3</li>
+        <li>görev4</li>
+        <li>görev5</li>
+    </ul>
+    <script>
+        let sonuc;
+        sonuc=document.getElementById('isim');//Bu yönetem bizde isim id si içerisindeki değeri gösteriri
+        sonuc=document.getElementById('isim').id;//isim değerinin ıd bilgisini almak istiyorsak bu yöntemi deneriz.
+        sonuc=document.getElementById('isim').className;//clasın ismini yazdırır
+        sonuc=document.getElementById('isim').classList;//class ın bütün bilgilerini yazdırır
+        sonuc=document.getElementById('isim').style.fontSize="100px";
+        sonuc=document.getElementById('isim').style.color="red";
+        // sonuc=document.getElementById('isim').style.display="none";//Görünürülüğü değiştirmek için kullanılır
+
+        sonuc=document.getElementById('isim').innerText="Bu methodu tarihinde değiştirdin";//id içerisinde buulunan yazıyı değiştirmek için kullanılır.
+
+        sonuc=document.getElementById('isim').innerHTML="<h6>Bu bir test yazısı</h6>";// Etiket kullanamk için bu yöntem kullanılır inner texte etiketler çalışmaz
+
+        sonuc=document.querySelector('#isim');//aynı yöntem ama burada id deriz seleniumda kullandığın methotlar bu şekilde kullanılr
+
+        sonuc=document.querySelector('.class');
+
+        sonuc=document.querySelector('div');// ilk divi getirir
+
+        sonuc=document.querySelector('li:first-child');// ilk elemanı almak istiyorsan bu yönetmei kullanmalısın
+        sonuc=document.querySelector('li:last-child');//son elemanı almal istiyorsan bu yönetem
+        sonuc=document.querySelector('li:nth-child(2)');//istediğimiz değeri almak istiyorsak bu methodu kullanmalıyız
+        console.log(sonuc);
+    </script>
+</html>

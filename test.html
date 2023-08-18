@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="kutu">
+        <h1>
+            <a onclick="Dondur()" href="#">Button</a>
+        </h1>
+    </div>
+    <script>
+        var yazi=`<div class='masa'>
+                <h1>ASLINUR</h1>
+            </div>`
+        // document.addEventListener('click',Dondur)
+
+
+        
+        function Dondur(){
+                var isim_="<br>Butona Basıldı</br>";
+                var isim=document.querySelector('.kutu h1');
+                isim.insertAdjacentHTML("beforeend",isim_);
+                var basildi=document.querySelector('a').style.margin='50px';
+            
+        }
+        
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kutu {
+            overflow: hidden;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="Contain">
+        <div class="kutu">
+            <h1 id="isim">İsim</h1>
+        </div>
+    </div>
+    <script>
+        var gidis = 0;
+        var ileri = true; // İleri yönde hareket ettiğimizi belirtmek için bir bayrak
+        function moveText() {
+            if (ileri) {
+                gidis += 1;
+                isim.style.color=('red');
+
+                if (gidis >= 400) {
+                    ileri = false; // 400px'ye ulaştığında geri yönde hareket etmeye başla
+                    isim.style.color=('Grey');
+
+                }
+            } else {
+                gidis -= 1;
+                if (gidis <= 0) {
+
+                    ileri = true; // Başlangıç noktasına geldiğinde tekrar ileri yönde hareket etmeye başla
+                }
+            }
+            isim.style.marginLeft = `${gidis}px`;
+            isim.style.marginRight = `${gidis}px`;
+
+            // Her 10 milisaniyede bir moveText fonksiyonunu çağırarak hareketi sağla
+            setTimeout(moveText, 7);
+        }
+
+        var isim = document.querySelector('#isim');
+        moveText();
+    </script>
+</body>
+</html>

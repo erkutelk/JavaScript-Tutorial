@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            
+            <a href="#" id='Menu'>MENU</a>
+            <ul id="header">
+                <li>Menu</li>
+                <li>Menu</li>
+                <li>Menu</li>
+            </ul>
+        
+            
+        </header>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        margin: auto;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        display: none;
+    }
+</style>
+<script>
+    var deger = document.querySelector('#Menu').addEventListener('click', menu)
+    var menu = document.querySelector('#header')
+
+    function menu() {
+        if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
+        }
+
+
+    }
+</script>
+
+</html>

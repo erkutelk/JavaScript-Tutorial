@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="class">
+        <h1 id='isim'>Erkut ELik</h1>
+    </div>
+
+    <ul id="task-list">
+        <li class="task">görev1</li>
+        <li class="task">görev2</li>
+        <li class="task">görev3</li>
+
+    </ul>
+    <script>
+        let sonuc;
+        li=document.getElementById('task-list');
+
+        sonuc=li.children;//hepsini getirir
+        // sonuc=li.children[2];
+        sonuc=document.querySelector('.task').nextElementSibling.nextElementSibling;
+        console.log(sonuc);    
+    </script>
+</body>

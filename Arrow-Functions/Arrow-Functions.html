@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES5
+        var selamVer=function(){
+            console.log('Mehaba!')
+        }
+
+        selamVer()
+
+        //                                    ES6 Versiyonu 
+        var selamVer6=()=>{console.log('E6 İle selam verma işlemi ile selam verme!')}
+        selamVer6()
+
+
+        // Parametre Göndermek 
+        var isminiSor=(isim)=>{console.log('Merhaba benim ismim',isim)}
+        isminiSor('Erkut')
+
+
+        // birinci yöntem
+        var Toplam=(sayi1,sayi2)=>{
+            return sayi1+sayi2
+        }
+        console.log(Toplam(15,52))
+
+
+        
+        // ikinci yöntem
+        var Toplam2=(a,b)=>a+b;
+        sonuc=Toplam2(10,10)
+        console.log(sonuc)
+
+
+
+
+        // var deger=Toplam(10,20);
+        // console.log(deger)
+        // Degeri kullanılabilir
+    </script>
+</body>
+</html>

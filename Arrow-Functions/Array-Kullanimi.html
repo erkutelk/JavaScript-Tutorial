@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var deger=[{'isim':'Erkut'},{'isim':'Ahmet'},{'isim':'Özge'},{'isim':'Aslınur'},{'isim':'cem'},{'isim':'nur'}];
+        var yazdir=deger.map(urun=>urun.isim);
+        var flt=deger.filter(urun=>urun.isim.length<4);
+        var flt2=deger.filter(urun=>urun.isim.length<4).map(urun=>urun.isim);
+        var index=deger.findIndex(urun=>urun.isim==='Özge')//liste de bulunan özge değerinin index değerini yazdırır
+
+
+
+        //Bu kod JavaScript dilinde yazılmış bir örnektir. map fonksiyonu, bir dizinin tüm elemanları üzerinde belirli bir işlem yaparak yeni bir dizi oluşturmanıza olanak tanır
+        console.log(yazdir);
+        console.log(flt)
+        console.log(flt2)
+        console.log(index)
+        
+    </script>
+    
+</body>
+</html>

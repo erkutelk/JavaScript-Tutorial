@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="class">
+        <h1 id='isim'>Erkut ELik</h1>
+    </div>
+
+    <ul>
+        <li class="task">görev1</li>
+        <li class="task">görev2</li>
+        <li class="task">görev3</li>
+
+    </ul>
+    <script>
+        let sonuc;
+        // sonuc=document.getElementsByClassName('task')[0];
+        sonuc=document.getElementsByClassName('task');//Gorevlere bu şekilde ulaşabilirsin
+
+        for (let index = 0; index < sonuc.length; index++) {//Bütün değerleri almak için bu method kullanılır
+            console.log(sonuc[index],'Değeri Alındı');
+            
+        }
+
+        //Bu method dışında bu methoda kullanılabilir bu yöntem bütün elemanlara ulaşmak için daga basit bir yöntemdir
+        for (let task of sonuc) {//Hepsine ulaşmak için of değeri kullanılır,Eğer index değerlerine ulaşmak istiyorsak in dememiz gerekiyor
+            console.log(task);
+            task.style.color=('red');//Gelen bütün elemanların rengini kırmızı yapmak için kullanılır
+            task.style.fontSize='20px';//Bütün elemanların boyutunu değiştrimek için kullanılır
+            task.innerText='Erkut';//Gelen bütün elemanların isimlerini değiştiremliyiz
+        }
+
+        console.log(sonuc);
+    </script>
+
+<body>

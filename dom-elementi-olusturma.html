@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+</head>
+<body>
+    <ul id="task-list" class="list-group">
+        <!-- Task items will be added here -->
+    </ul>
+
+    <script>
+        let liste = [{
+            'Erkut': {
+                "isim": "Erkut",
+                "Soyisim": "Elik",
+                "Numara": 155
+            },
+            'Mustafa': {
+                'isim': 'Mustafa',
+                'Soyisim': 'Kaçmaz',
+                'Numara': 666
+            }
+        }];
+
+        let ul = document.getElementById("task-list");
+        for (let index in liste[0]) {
+            let person = liste[0][index];
+
+            let li = `<li class="task list-group-item">
+                            <div class="form-check">
+                                <h1>${person.isim} ${person.Soyisim}</h1>
+                                <input type="checkbox" id="${index + 1}" class="form-check-input">
+                                <label for="${index + 1}" class="form-check-label">${person.isim} ${person.Soyisim}</label>
+                            </div>
+                        </li>`;
+            ul.insertAdjacentHTML('beforeend', li);
+        }
+    </script>
+</body>
+</html>
